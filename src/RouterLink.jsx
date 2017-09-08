@@ -4,7 +4,8 @@
  * Date: 08.09.2016
  */
 
-import React, { PropTypes } from 'react';
+import React  from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
