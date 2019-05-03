@@ -76,8 +76,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _history = __webpack_require__(22);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -89,8 +87,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Author: H.Alper Tuna <halpertuna@gmail.com>
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Date: 08.09.2016
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-	var history = (0, _history.createBrowserHistory)();
 
 	var RouterLink = function (_React$Component) {
 	  _inherits(RouterLink, _React$Component);
@@ -107,8 +103,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.to = this.props.to;
 	      if (this.to[0] !== '/') this.to = '/' + this.to;
 
-	      history.listen(this.onLocationChange.bind(this));
-	      this.onLocationChange(this.props.router.route);
+	      this.props.history.listen(this.onLocationChange.bind(this));
+	      this.onLocationChange(this.props.location);
 	    }
 	  }, {
 	    key: 'onLocationChange',
