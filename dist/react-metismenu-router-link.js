@@ -167,7 +167,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	RouterLink.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
+	  router: _propTypes2.default.object.isRequired
 	};
 
 	exports.default = RouterLink;
