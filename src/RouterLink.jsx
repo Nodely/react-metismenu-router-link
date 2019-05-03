@@ -8,13 +8,14 @@ import React  from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+import { browserHistory } from 'react-router-dom';
 
 class RouterLink extends React.Component {
   componentWillMount() {
     this.to = this.props.to;
     if (this.to[0] !== '/') this.to = `/${this.to}`;
 
-    this.context.router.history.listen(this.onLocationChange.bind(this));
+    browserHistory.listen(this.onLocationChange.bind(this));
     this.onLocationChange(this.context.router.route);
   }
   onLocationChange(e) {

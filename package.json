@@ -1,6 +1,6 @@
 {
-  "name": "react-metismenu-router-link",
-  "version": "2.0.1",
+  "name": "nodely-metismenu-router-link",
+  "version": "3.0.0",
   "description": "Router link extension for `react-metismenu` menu component.",
   "main": "lib/RouterLink.js",
   "keywords": [
@@ -48,20 +48,18 @@
     "eslint-plugin-react": "^6.3.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-metismenu": "^1.2.2",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
+    "nodely-metismenu": "*",
+    "react-router-dom": "^5.0.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
   },
   "peerDependencies": {
     "react": "^15.0",
-    "react-metismenu": "^1.2.2",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "nodely-metismenu": "*",
+    "react-router-dom": "^5.0.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.10"
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
   }
 }
