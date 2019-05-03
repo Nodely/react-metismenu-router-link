@@ -6,7 +6,7 @@
 
 import React  from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import classnames from 'classnames';
 import { createBrowserHistory } from 'history'
 
@@ -18,7 +18,7 @@ class RouterLink extends React.Component {
     if (this.to[0] !== '/') this.to = `/${this.to}`;
 
     history.listen(this.onLocationChange.bind(this));
-    this.onLocationChange(this.context.router.route);
+    this.onLocationChange(this.props.router.route);
   }
   onLocationChange(e) {
     if ((e.pathname || '/') === this.to) {
@@ -86,8 +86,4 @@ RouterLink.propTypes = {
   ]).isRequired,
 };
 
-RouterLink.contextTypes = {
-  router: PropTypes.object.isRequired,
-};
-
-export default RouterLink;
+export default withRouter(RouterLink);

@@ -108,7 +108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (this.to[0] !== '/') this.to = '/' + this.to;
 
 	      history.listen(this.onLocationChange.bind(this));
-	      this.onLocationChange(this.context.router.route);
+	      this.onLocationChange(this.props.router.route);
 	    }
 	  }, {
 	    key: 'onLocationChange',
@@ -170,11 +170,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  children: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.array]).isRequired
 	};
 
-	RouterLink.contextTypes = {
-	  router: _propTypes2.default.object.isRequired
-	};
-
-	exports.default = RouterLink;
+	exports.default = (0, _reactRouterDom.withRouter)(RouterLink);
 
 /***/ }),
 /* 1 */
