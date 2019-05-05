@@ -126,7 +126,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          externalLink = _props.externalLink,
 	          hasSubMenu = _props.hasSubMenu,
 	          toggleSubMenu = _props.toggleSubMenu,
-	          children = _props.children;
+	          children = _props.children,
+	          ariaExpanded = _props.ariaExpanded;
 
 
 	      return hasSubMenu || externalLink ? _react2.default.createElement(
@@ -135,7 +136,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          className: (0, _classnames2.default)(className, hasActiveChild && classNameHasActiveChild),
 	          target: externalLink ? '_blank' : undefined,
 	          href: to,
-	          onClick: toggleSubMenu
+	          onClick: toggleSubMenu,
+	          'aria-expanded': ariaExpanded
 	        },
 	        children
 	      ) : _react2.default.createElement(
@@ -160,6 +162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  hasActiveChild: _propTypes2.default.bool.isRequired,
 	  to: _propTypes2.default.string.isRequired,
 	  externalLink: _propTypes2.default.bool,
+	  ariaExpanded: _propTypes2.default.bool,
 	  hasSubMenu: _propTypes2.default.bool.isRequired,
 	  toggleSubMenu: _propTypes2.default.func,
 	  activateMe: _propTypes2.default.func.isRequired,

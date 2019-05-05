@@ -34,6 +34,7 @@ class RouterLink extends React.Component {
       hasSubMenu,
       toggleSubMenu,
       children,
+      ariaExpanded,
     } = this.props;
 
     return (
@@ -47,6 +48,7 @@ class RouterLink extends React.Component {
           target={externalLink ? '_blank' : undefined}
           href={to}
           onClick={toggleSubMenu}
+          aria-expanded={ariaExpanded}
         >
           {children}
         </a>
@@ -74,6 +76,7 @@ RouterLink.propTypes = {
   hasActiveChild: PropTypes.bool.isRequired,
   to: PropTypes.string.isRequired,
   externalLink: PropTypes.bool,
+  ariaExpanded: PropTypes.bool,
   hasSubMenu: PropTypes.bool.isRequired,
   toggleSubMenu: PropTypes.func,
   activateMe: PropTypes.func.isRequired,
